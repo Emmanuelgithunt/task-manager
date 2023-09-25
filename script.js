@@ -6,10 +6,14 @@ function Handlesubmit() {
     const taskText = taskinput.value.trim();
 
     if(taskText !== '') {
-        //addTask(taskText)
+        addTask(taskText)
         taskinput.value = '',
         taskinput.focus()
     } else{
         alert('Please, fill in the input field')
     };
+};
+
+function addTask(text) {
+    console.log(text);
 }
