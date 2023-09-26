@@ -25,5 +25,13 @@ function addTask(text) {
     deleteBtn.addEventListener('click', function() {
         taskItem.remove();
     })
+
+    const editBtn = taskItem.querySelector('.edit-btn')
+    editBtn.addEventListener('click', function() {
+        const newText = prompt('Enter new task text:', text);
+        if (newText !== null && newText.trim() !== '') {
+            taskItem.firstChild.textContent = newText;
+        }
+    })
     tasklist.appendChild(taskItem)
 }
