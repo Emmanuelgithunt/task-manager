@@ -15,5 +15,10 @@ function Handlesubmit() {
 };
 
 function addTask(text) {
-    console.log(text);
+    const taskItem = document.createElement('li');
+    taskItem.className = 'task-item';
+    taskItem.innerHTML = `${text}
+    <button class="delete-btn">Delete</button>
+    <button class="edit-btn">Edit</button>`;
+    tasklist.appendChild(taskItem)
 }
