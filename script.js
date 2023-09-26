@@ -20,5 +20,10 @@ function addTask(text) {
     taskItem.innerHTML = `${text}
     <button class="delete-btn">Delete</button>
     <button class="edit-btn">Edit</button>`;
+
+    const deleteBtn = taskItem.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', function() {
+        taskItem.remove();
+    })
     tasklist.appendChild(taskItem)
 }
